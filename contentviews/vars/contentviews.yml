@@ -2,7 +2,7 @@
 # In this repo we aren't building the satellite, so...
 # - your repos need to exist and be syncd
 # - your lifecycle environments need to exist
-sat_server_url: "https://sat6.parmstrong.ca"
+sat_server_url: "https://sat6.parmstrong.ca/"
 sat_organization: "Default Organization"
 sat_publisher_username: "{{ vault_sat_publisher_username }}"
 sat_publisher_password: "{{ vault_sat_publisher_password }}"
