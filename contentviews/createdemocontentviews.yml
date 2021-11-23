@@ -7,5 +7,4 @@
   roles:
   - ../AutomatingContentManagement/roles/cvcreator
   - ../AutomatingContentManagement/roles/cvpublisher
-  - - ../AutomatingContentManagement/roles/cvpromoter
-  
+  - ../AutomatingContentManagement/roles/cvpromoter
