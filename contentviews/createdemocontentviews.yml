@@ -9,7 +9,7 @@
   tasks:
   - ansible.builtin.import_role:
       name: ../AutomatingContentManagement/roles/cvcreator
-  - ansible.builtin.import_role:
-      name: ../AutomatingContentManagement/roles/cvpublisher
-  - ansible.builtin.import_role:
-      name: ../AutomatingContentManagement/roles/cvpromoter
+  #- ansible.builtin.import_role:
+  #    name: ../AutomatingContentManagement/roles/cvpublisher
+  #- ansible.builtin.import_role:
+  #    name: ../AutomatingContentManagement/roles/cvpromoter
