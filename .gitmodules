@@ -1,0 +1,3 @@
+[submodule "AutomatingContentManagement"]
+	path = AutomatingContentManagement
+	url = https://github.com/parmstro/AutomatingContentManagement.git
