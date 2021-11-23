@@ -6,7 +6,10 @@
   - vars/contentviews.yml
   - ../AutomatingContentManagement/group_vars/all/vault_all.yml
 
-  roles:
-  - ../AutomatingContentManagement/roles/cvcreator
-  - ../AutomatingContentManagement/roles/cvpublisher
-  - ../AutomatingContentManagement/roles/cvpromoter
+  tasks:
+  - ansible.builtin.import_role:
+      name: ../AutomatingContentManagement/roles/cvcreator
+  - ansible.builtin.import_role:
+      name: ../AutomatingContentManagement/roles/cvpublisher
+  - ansible.builtin.import_role:
+      name: ../AutomatingContentManagement/roles/cvpromoter
