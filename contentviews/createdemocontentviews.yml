@@ -1,0 +1,11 @@
+---
+# This play creates the demo content views defined in vars/contentviews.yml
+- name: Create the demo content views
+  hosts: all
+  vars_file: vars/contentviews.yml
+
+  roles:
+  - ../AutomatingContentManagement/roles/cvcreator
+  - ../AutomatingContentManagement/roles/cvpublisher
+  - - ../AutomatingContentManagement/roles/cvpromoter
+  
