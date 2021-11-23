@@ -2,7 +2,9 @@
 # This play creates the demo content views defined in vars/contentviews.yml
 - name: Create the demo content views
   hosts: all
-  vars_file: vars/contentviews.yml
+  vars_files: 
+  - vars/contentviews.yml
+  - ../AutomatingContentManagement/group_vars/vault_all.yml
 
   roles:
   - ../AutomatingContentManagement/roles/cvcreator
