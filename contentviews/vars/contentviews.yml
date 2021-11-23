@@ -37,7 +37,7 @@ content_views:
       original_packages: true
       repositories: "[]"
     - name: "AllStreamsNoErrata"
-      type: "module"
+      type: "modulemd"
       inclusion: "true"
       description: "Include all packages with no errata for all repositories"
       original_packages: true
@@ -94,7 +94,7 @@ content_views:
       original_packages: true
       repositories: "[]"
     - name: "AllStreamsNoErrata"
-      type: "module"
+      type: "modulemd"
       inclusion: "true"
       description: "Include all packages with no errata for all repositories"
       original_packages: true
@@ -139,7 +139,7 @@ content_views:
       original_packages: true
       repositories: "[]"
     - name: "AllStreamsNoErrata"
-      type: "module"
+      type: "modulemd"
       inclusion: "true"
       description: "Include all packages with no errata for all repositories"
       original_packages: true
