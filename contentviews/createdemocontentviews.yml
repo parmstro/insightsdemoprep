@@ -4,7 +4,7 @@
   hosts: all
   vars_files: 
   - vars/contentviews.yml
-  - ../AutomatingContentManagement/group_vars/vault_all.yml
+  - ../AutomatingContentManagement/group_vars/all/vault_all.yml
 
   roles:
   - ../AutomatingContentManagement/roles/cvcreator
