@@ -4,6 +4,7 @@
   hosts: all
   vars_files: 
   - vars/content_views.yml
+  - ../AutomatingContentManagement/group_vars/all/sat_server.yml
   - ../AutomatingContentManagement/group_vars/all/vault_all.yml
 
   tasks:
