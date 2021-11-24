@@ -5,7 +5,7 @@
 - name: Create the ansible inventory for testing Insights
   hosts: localhost
   connection: local
-  varsfiles:
+  vars_files:
   - vars/hostlist.yml
   - vars/vaultvars.yml
   - ../AutomatingContentManagement/group_vars/all/sat_server.yml
