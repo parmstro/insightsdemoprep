@@ -2,17 +2,12 @@
 # In this repo we aren't building the satellite, so...
 # - your repos need to exist and be syncd
 # - your lifecycle environments need to exist
-sat_server_url: "https://sat6.parmstrong.ca/"
-sat_organization: "Default Organization"
-sat_publisher_username: "{{ vault_sat_publisher_username }}"
-sat_publisher_password: "{{ vault_sat_publisher_password }}"
-sat_validate_certs: false
 description: "Published by ansible-tower on {{ ansible_date_time.date }}"
 filter_enddate: "2021-07-01"
 num_cvs_to_keep: 3
 content_views:
   - name: "RHEL7_InsightsDemo"
-    desc: "RHEL7 Insights Demo Content - this content is intentionly outdated for demostration purposes. NFP"
+    desc: "RHEL7 Insights Demo Content - this content is intentionally outdated for demonstration purposes. NFP"
     org: "{{ sat_organization }}"
     repositories:
     - name: "Red Hat Ansible Engine 2.9 RPMs for Red Hat Enterprise Linux 7 Server x86_64"
@@ -64,7 +59,7 @@ content_views:
     - "Demonstration"
 
   - name: "RHEL8_InsightsDemo"
-    desc: "RHEL8 Insights Demo Content - this content is intentionly outdated for demostration purposes. NFP"
+    desc: "RHEL8 Insights Demo Content - this content is intentionally outdated for demonstration purposes. NFP"
     org: "{{ sat_organization }}"
     repositories:
     - name: "Red Hat Ansible Engine 2.9 RPMs for RHEL 8 Server x86_64"
@@ -121,7 +116,7 @@ content_views:
     - "Demonstration"
     
   - name: "JBossEAP72_InsightsDemo"
-    desc: "JBoss EAP 7.2 Insights Demo - this content is intentionly outdated for demostration purposes. NFP"
+    desc: "JBoss EAP 7.2 Insights Demo - this content is intentionally outdated for demonstration purposes. NFP"
     org: "{{ sat_organization }}"
     repositories:
     - name: "JBoss Enterprise Application Platform 7.3 RHEL 8 RPMs"

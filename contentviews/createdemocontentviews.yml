@@ -3,12 +3,14 @@
 - name: Create the demo content views
   hosts: all
   vars_files: 
-  - vars/contentviews.yml
+  - vars/content_views.yml
   - ../AutomatingContentManagement/group_vars/all/vault_all.yml
 
   tasks:
-  - ansible.builtin.import_role:
-      name: ../AutomatingContentManagement/roles/cvcreator
+  # Content view creation currently fails due to issues with
+  # filter and filter rule creation
+  #- ansible.builtin.import_role:
+  #    name: ../AutomatingContentManagement/roles/cvcreator
   - ansible.builtin.import_role:
       name: ../AutomatingContentManagement/roles/ccvcreator
   - ansible.builtin.import_role:
