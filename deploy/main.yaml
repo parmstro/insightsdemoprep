@@ -8,9 +8,7 @@
   vars_files:
   - vars/hostlist.yml
   - vars/vaultvars.yml
-  - ../AutomatingContentManagement/group_vars/all/sat_server.yml
-  - ../AutomatingContentManagement/group_vars/all/vault_all.yml
-
+ 
   tasks:
   - name: Create the inventory to be used for insights demos
     ansible.controller.inventory:
@@ -36,8 +34,7 @@
     loop_control:
       loop_var: host
 
-  - name: Deploy the systems in the inventory list
-    include: ../AutomatingContentManagement/CreateHostFromHostGroup.yml
+  
 
 
   
