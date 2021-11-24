@@ -32,7 +32,7 @@
       inventory: "{{ inventory_description }}"
       state: present
       variables: "{{ host.variables }}"
-    loop: inventory_hosts
+    loop: "{{ inventory_hosts }}"
     loop_control:
       loop_var: host
 
