@@ -29,7 +29,7 @@
       controller_password: "{{ controller_password }}"
       name: "{{ host.name }}"
       description: "{{ host.description }}"
-      inventory: "{{ inventory_description }}"
+      inventory: "{{ inventory_name }}"
       state: present
       variables: "{{ host.variables }}"
     loop: "{{ inventory_hosts }}"
