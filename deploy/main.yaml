@@ -1,0 +1,41 @@
+---
+# This is the main file for the insights demo deployment section
+# This createsthe inventory and deploys the hosts.
+
+- name: Create the ansible inventory for testing Insights
+  hosts: localhost
+  connection: local
+  varsfiles:
+  - vars/hostlist.yml
+  - vars/vaultvars.yml
+  - ../AutomatingContentManagement/group_vars/all/sat_server.yml
+  - ../AutomatingContentManagement/group_vars/all/vault_all.yml
+
+  tasks:
+  - name: Create the inventory to be used for insights demos
+    ansible.controller.inventory:
+      controller_host: "{{ controller_host }}"
+      controller_username: "{{ controller_username }}"
+      controller_password: "{{ controller_password }}"
+      description: "{{ inventoryname }}"
+      organization: "Default"
+      state: present
+      
+  - name: Create the host entries in the inventory
+    ansible.controller.host:
+      controller_host: "{{ controller_host }}"
+      controller_username: "{{ controller_username }}"
+      controller_password: "{{ controller_password }}"
+      name: "{{ host.name }}"
+      description: "{{ host.description }}"
+      inventory: "Local Inventory"
+      state: present
+      variables: "{{ host.variables }}"
+    loop: inventoryhosts
+    loopvar: host
+
+  - name: Deploy the systems in the inventory list
+    include_tasks: ../AutomatingContentManagement/CreateHostFromHostGroup.yml
+
+
+  
