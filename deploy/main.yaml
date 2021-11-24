@@ -17,8 +17,9 @@
       controller_host: "{{ controller_host }}"
       controller_username: "{{ controller_username }}"
       controller_password: "{{ controller_password }}"
-      description: "{{ inventoryname }}"
-      organization: "Default"
+      name:  "{{ inventory_name }}"
+      description: "{{ inventory_description }}"
+      organization: "{{ inventory_organization }}"
       state: present
       
   - name: Create the host entries in the inventory
@@ -28,10 +29,10 @@
       controller_password: "{{ controller_password }}"
       name: "{{ host.name }}"
       description: "{{ host.description }}"
-      inventory: "Local Inventory"
+      inventory: "{{ inventory_description }}"
       state: present
       variables: "{{ host.variables }}"
-    loop: inventoryhosts
+    loop: inventory_hosts
     loop_control:
       loop_var: host
 

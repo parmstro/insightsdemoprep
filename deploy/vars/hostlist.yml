@@ -2,8 +2,10 @@
 controller_host: "https://tower.parmstrong.ca"
 controller_username: "{{ vault_controller_username }}"
 controller_password: "{{ vault_controller_password }}"
-inventoryname: "InsightsDemoInventory"
-inventoryhosts:
+inventory_name: "InsightsDemoInventory"
+inventory_description: "Hosts for Red Hat Insights Demo"
+inventory_organization: "Default"
+inventory_hosts:
 - name: "insightsjboss.parmstrong.ca"
   description: "a test jboss standalone host for testing with insights"
   variables:
