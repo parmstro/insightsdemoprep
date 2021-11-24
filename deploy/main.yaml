@@ -37,7 +37,7 @@
       loop_var: host
 
   - name: Deploy the systems in the inventory list
-    include_tasks: ../AutomatingContentManagement/CreateHostFromHostGroup.yml
+    include: ../AutomatingContentManagement/CreateHostFromHostGroup.yml
 
 
   
