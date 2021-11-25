@@ -1,0 +1,22 @@
+---
+# This play breaks a couple of things that have known insight rules.
+
+- name: Create some Insights rule hits for test hosts.
+  hosts: all
+  gather_facts: no
+
+
+  tasks:
+
+  - name: Set SELinux to passive mode
+    ansible.builtin.command: "setenforce Permissive"
+
+  - name: Turn off firewalld
+    ansible.posix.firewalld:
+      state: stopped
+      enabled: false
+  
+  - name: Turn off icmp_echo_ignore_broadcasts - may have been done when troubleshooting networking
+    command: "sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=0; echo net.ipv4.icmp_echo_ignore_broadcasts=0 >> /etc/sysctl.d/99-sysctl.conf"
+
+  
