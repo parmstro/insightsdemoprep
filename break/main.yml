@@ -17,6 +17,12 @@
 
   
   - name: Turn off icmp_echo_ignore_broadcasts - may have been done when troubleshooting networking
-    command: "sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=0; echo net.ipv4.icmp_echo_ignore_broadcasts=0 >> /etc/sysctl.d/99-sysctl.conf"
+    command: "sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=0" 
+
+  - name: Make it persistent through reboots  
+    ansible.builtin.lineinfile:
+      path: "/etc/sysctl.d/99-sysctl.conf"
+      state: present
+      line: "net.ipv4.icmp_echo_ignore_broadcasts=0"
 
   
